@@ -648,6 +648,126 @@
       "final"
     ]
   },
+  "ML_ANCHORED_EXPONENT": {
+    "description": "HPWL-progress exponent used by anchored dynamic ML weighting.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_ARTIFACT_DIR": {
+    "description": "Artifact directory made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_COVERAGE_POLICY": {
+    "description": "Prediction coverage policy made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_DP_FEATURE_SET_ID": {
+    "description": "Feature-set namespace for retrospective detailed-placement model input.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_FEATURE_SET_ID": {
+    "description": "Stable feature-set namespace made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_MINIMUM_COVERAGE": {
+    "description": "Minimum prediction coverage made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_MODEL_MANIFEST": {
+    "description": "Model manifest made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_PROGRESS_MAX": {
+    "description": "Maximum HPWL-progress multiplier used by anchored dynamic ML weighting.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_PROGRESS_MIN": {
+    "description": "Minimum HPWL-progress multiplier used by anchored dynamic ML weighting.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_PYTHONPATH": {
+    "description": "Python import path made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_PYTHON_EXE": {
+    "description": "Python executable made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_RATIO_MAX": {
+    "description": "Maximum prediction-to-HPWL ratio made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_RATIO_MIN": {
+    "description": "Minimum prediction-to-HPWL ratio made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_REPLAY_PREDICTIONS": {
+    "description": "Lineage-remapped prediction file supplied to a replay hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_TAIL_ITERATIONS": {
+    "description": "Extra accepted Nesterov iterations run by an enabled late-tail ML mode.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_UPDATE_EMA": {
+    "description": "Exponential moving-average coefficient for dynamic ML weight updates.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_UPDATE_INTERVAL": {
+    "description": "Accepted Nesterov iterations between dynamic ML weight updates.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_UPDATE_MAX_DELTA": {
+    "description": "Maximum fractional custom-weight change allowed at each dynamic update.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_UPDATE_MODE": {
+    "description": "Selects fixed, current-ratio, anchored, or late-tail ML net weighting.\n",
+    "stages": [
+      "place"
+    ]
+  },
+  "ML_WIRELENGTH_ALPHA": {
+    "description": "Wirelength blending coefficient made available to a pre-Nesterov ML hook.\n",
+    "stages": [
+      "place"
+    ]
+  },
   "NEG_CLKGATE_AND_PORTS": {
     "description": "Specifies the active low enable clock gating cell and port names when used in conjunction with the INFER_CLKGATES variable. Format is \"cell_name enable_port:master_clock:gated_clock\"\n",
     "stages": [
@@ -871,6 +991,12 @@
     "description": "Specifies a Tcl script with commands to run before floorplan.\n",
     "stages": [
       "floorplan"
+    ]
+  },
+  "PRE_GLOBAL_PLACE_NESTEROV_TCL": {
+    "description": "Specifies a Tcl script to run after global-placement netlist edits and\nquadratic initial placement, immediately before Nesterov placement.\n",
+    "stages": [
+      "place"
     ]
   },
   "PRE_GLOBAL_PLACE_SKIP_IO_TCL": {

@@ -23,6 +23,15 @@ if { ![env_var_exists_and_non_empty FOOTPRINT] } {
 
 set global_placement_args {}
 
+# OpenROAD sources this callback after quadratic initial placement and before
+# constructing the Nesterov data structures.  External estimators therefore
+# see both the exact netlist and the exact initial-placement coordinates/HPWL
+# consumed by Nesterov placement.
+if { [env_var_exists_and_non_empty PRE_GLOBAL_PLACE_NESTEROV_TCL] } {
+  lappend global_placement_args \
+    -post_initial_place_tcl $::env(PRE_GLOBAL_PLACE_NESTEROV_TCL)
+}
+
 # Parameters for routability mode in global placement
 append_env_var global_placement_args GPL_ROUTABILITY_DRIVEN -routability_driven 0
 
